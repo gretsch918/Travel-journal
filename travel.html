@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Willie的英打遊記 - 旅遊篇</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="icon" href="images/abbr.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ramabhadra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+</head>
+<style>
+    .dm_serif {
+        font-family: 'DM Serif Display', serif;
+    }
+
+    .navbar-nav {
+        width: 300px;
+        line-height: 3rem;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        font-weight: 400;
+        display: inline-block;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .navbar-collapse {
+        height: 100%;
+    }
+
+    .nav-item {
+        position: relative;
+    }
+
+    .nav-item:hover {
+        font-weight: 600;
+    }
+
+    .nav-item::before {
+        content: "";
+        width: 120%;
+        border: 1px solid transparent;
+        position: absolute;
+        bottom: 0;
+        transition: .5s;
+    }
+
+    .nav-item:hover::before {
+        content: "";
+        width: 90%;
+        border: 1px solid #000000;
+    }
+
+    @media screen and (max-width:576px){
+       .navbar-brand{
+           font-size: 2rem;
+       }
+       .navbar{
+           padding: 3.5px 1rem;
+       }
+       .navbar button{
+           width: 56px;
+           height: 52px;
+       }
+       .navbar-nav{
+           width: 100%;
+       }
+       .navbar-nav .nav-link{
+        color: black !important;
+    }
+    }
+
+    body {
+        padding-top: 50px;
+    }
+
+    .main {
+        width: 100%;
+        height: 95vh;
+        position: relative;
+        background: #D4F6F7;
+        overflow: hidden;
+        box-shadow: 0 3px 20px 5px #eeeeee;
+    }
+
+    .main::before {
+        position: absolute;
+        content: "";
+        width: 33%;
+        height: 100%;
+        background: rgb(227, 211, 245);
+        z-index: 1;
+        animation-name: box-ani;
+        animation-duration: 1s;
+    }
+
+    @keyframes box-ani {
+        0% {
+            width: 33%;
+            height: 0
+        }
+
+        100% {
+            width: 33%;
+            height: 100%;
+        }
+    }
+
+    .main::after {
+        position: absolute;
+        content: "";
+        width: 33%;
+        height: 100%;
+        left: 33%;
+        background: #B8B8D6;
+        z-index: 2;
+    }
+
+
+    .tra_text {
+        position: absolute;
+        z-index: 5;
+        left: 35%;
+        bottom: 35%;
+        color: #fff;
+    }
+
+    .tra_text h1 {
+        font-size: 3.5rem;
+        font-weight: 400;
+    }
+
+    .tra_text h3 {
+        font-family: 'Shadows Into Light', cursive;
+    }
+
+    .main figure {
+        position: absolute;
+        width: 30%;
+        height: 90%;
+        z-index: 3;
+        right: 20%;
+        top: 0;
+    }
+
+    .main figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(80%);
+    }
+
+    .main .country {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        z-index: 1;
+        color:rgba(255, 255, 255, 0.7);
+        
+    }
+
+    .main .country h1 {
+        opacity: 0.9;
+        font-size: 7rem;
+
+    }
+
+    .main .country h2 {
+        opacity: 0.8;
+        font-size: 6rem;
+    }
+
+    .main .country h3 {
+        opacity: 0.7;
+        font-size: 5rem;
+    }
+
+    .main .country h4 {
+        opacity: 0.6;
+        font-size: 4rem;
+    }
+
+    .main .country h5 {
+        opacity: 0.5;
+        font-size: 3rem;
+    }
+
+    .main .country h6 {
+        opacity: 0.4;
+        font-size: 2rem;
+    }
+
+    .slide {
+        width: 200px;
+        height: 200px;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .photos {
+        padding: 30px;
+    }
+
+    @media screen and (max-width:576px){
+        .photos{
+            padding: 5px;
+        }
+        .main::before, .main::after, .main .country{
+            display: none;
+        }
+        .main{
+      background-image: url("images/IMG_5566.JPG");
+      box-shadow: none;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+        }
+        .tra_text{
+            top: 10%;
+            left: 15%;
+        }
+    }
+
+    .my-map {
+        height: 800px;
+
+    }
+
+    .my-mappic {
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .owl-stage-outer {
+        margin: 20px auto;
+        height: 300px;
+    }
+
+    .owl-stage {
+        transition: all 0s ease 0s;
+        height: 100%;
+        transform: translate3d(-1102, 0px, 0px);
+    }
+
+    .loop {
+        margin: 20px auto;
+        border: 1px solid #dddddd;
+        transition: .3s;
+    }
+
+    .loop:hover {
+        border: 1px solid #fff;
+        box-shadow: 0 0.75rem 1.25rem 0.0625rem rgba(64, 64, 64, 0.09);
+        transition: .3s;
+    }
+
+    .loop h1 {
+        font-family: 'Shadows Into Light', cursive;
+    }
+
+    .loop h4 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .owl-item {
+        width: 235px;
+        height: 100%;
+        margin-right: 10px;
+        overflow: hidden;
+    }
+
+    .owl-wrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+    .owl-item p {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 5px;
+        height: 10%
+    }
+
+    .owl-item:hover {
+        color: #058DC9;
+        transition: .4s;
+    }
+
+    .owl-item img {
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+    }
+
+    .photos p {
+        color: #666666;
+    }
+
+    .organize ul {
+        height: 370px;
+    }
+
+    .organize li {
+        width: 30%;
+        height: 100%;
+        border-radius: 5px;
+        /* border: 1px solid #dddddd; */
+        padding: 10px;
+        background: #f1f0facb;
+    }
+
+    .organize li a {
+        margin: 0 auto;
+        display: block;
+        width: 80%;
+        height: 60px;
+        overflow: hidden;
+        transition: .3s;
+        /* border: 1px solid #dddddd; */
+        border-radius: 5px;
+        background: #fff;
+        box-shadow: 0 0.75rem 1.25rem 0.0625rem rgba(64, 64, 64, 0.1);
+    }
+
+    .organize li a:hover {
+        border-color: #fff;
+        box-shadow: 0 0.75rem 1.25rem 0.0625rem rgba(64, 64, 64, 0.3);
+        transition: .3s;
+    }
+
+    .organize ul li img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .navbar a {
+        color: #fff;
+    }
+
+    .collapse h5 {
+        color: #fff;
+    }
+
+    .pos-f-t {
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        top: 0;
+    }
+
+    @media screen and (max-width:576px){
+        .organize li{
+            width: 100%;
+            height: 370px;
+            margin-bottom: 10px;
+        }
+        .organize{
+            height: 145vh;
+        }
+        .organize ul{
+            height: 130vh;
+        }
+
+    }
+
+    .footer_menu {
+        height: 80%;
+    }
+
+    .menu2,
+    .social,
+    .contact {
+        width: 270px;
+        margin: 1.5rem;
+        margin: 0 auto;
+        height: 30px;
+    }
+
+    .contact p a,
+    .iconss a {
+        color: black;
+        font-weight: 200;
+    }
+
+    .menu2 ul,
+    .social ul {
+        list-style: none;
+        width: 100%;
+    }
+
+    .menu2 li a {
+        color: black;
+        font-size: 1rem;
+        font-weight: 100;
+    }
+
+    .menu2 li a:hover,
+    .contact a:hover,
+    .iconss li a:hover {
+        color: #666666;
+        text-decoration: none;
+    }
+
+    .menu2_f {
+        margin-left: 5rem;
+        list-style: none;
+    }
+
+    .social {
+        width: 200px;
+    }
+
+    .iconss {
+        height: 100%;
+    }
+
+    .iconss ul {
+        height: 2.5rem;
+    }
+
+    .iconss ul li {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .iconss ul li a {
+        font-size: 1.8rem;
+    }
+
+    .contact {
+        width: 33%;
+    }
+
+
+    .view {
+        width: 100%;
+        height: 300px;
+    }
+
+    .view figure,
+    .view img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .short {
+        width: 7%;
+        margin: 0 auto;
+    }
+
+    .short img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .footer {
+        width: 100%;
+        height: auto;
+        background: #d7e1ed;
+        padding: 5px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+
+    @media screen and (max-width:576px){
+    .short{
+      width: 20%;
+    }
+    .iconss{
+      margin: 1rem auto;
+    }
+    
+  }
+
+
+</style>
+
+<body>
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-sm-0 fixed-top">
+                <div class="willie-j mx-4">
+                    <a class="navbar-brand pb-2 dm_serif" href="Index.html">Willie Journey.</a>
+                </div>
+                <button class="navbar-toggler d-sm-none p-3" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end dm_serif" id="navbarNavAltMarkup">
+                    <div class="navbar-nav justify-content-around mx-sm-5">
+                        <a class="text-center nav-item nav-link" href="live.html">Live <span class="sr-only">(current)</span></a>
+                        <a class="text-center nav-item nav-link " href="work.html" >Work</a>
+                        <a class="text-center nav-item nav-link disabled" href="travel.html" style="color:#000000">Travel</a>
+                        <a class="text-center nav-item nav-link" href="activity.html">Must Do</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="collapse dm_serif" id="navbarToggleExternalContent">
+                <div class="bg-dark p-2 text-center">
+                    <a class="p-1" href="live.html">
+                        <h5>Live</h5>
+                    </a>
+                    <h5 class="p-1">Work</h5>
+                    <a class="p-1" href="travel.html">
+                        <h5>Travel</h5>
+                    </a>
+                    <a class="p-1" href="activity.html">
+                        <h5>Must Do</h5>
+                    </a>
+                </div>
+            </div>
+    
+    <section class="main">
+        <div class="country dm_serif" data-aos="fade-down" data-aos-easing="ease-in-out">
+            <h1>Paris</h1>
+            <h2>Prague</h2>
+            <h3>Hallstatt</h3>
+            <h4>Amsterdam</h4>
+            <h5>Helsinki</h5>
+            <h6>Copenhagen</h6>
+        </div>
+        <div class="tra_text" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-duration="700"
+            data-aos-delay="300">
+            <h1 class="dm_serif">Travel.</h1>
+            <h4 class="d-sm-none dm_serif">Where did I travel?</h4>
+            <h3 class="d-none d-sm-block">I planned many short trips in Europe. <br>There`re always something beyond my expectation.</h3>
+        </div>
+        <figure class="d-none d-sm-block" data-aos="fade-down" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-duration="700">
+            <img src="images/IMG_6464.jpg" alt="">
+        </figure>
+    </section>
+    <h2 class="text-center mt-5">我的旅程</h2>
+    <div class="container my-5">
+        <p class="mb-5">
+            我計畫了很多次的微旅行，因為我第一次去到德國，安排了太多天，竟然有點想念倫敦的家，一方面我也有許多行程都是自己一個人，所以單獨旅行走得很快，也可以很果斷的做每個決定，我就陸陸續續去了我所有想去的地方，從北到南，從東到西，歐洲很大，我想我還有一部份的夢沒有完成，不過沒有關係，這樣的人生才有努力的目標！以下是我去過的城市：
+        </p>
+        <figure class="my-map w-100 d-none d-sm-block">
+            <img src="images/mymap.jpg" alt="" class="my-mappic w-100 h-100">
+        </figure>
+    </div>
+    <section class="photos">
+        <div class="container">
+            <div class="loop owl-carousel owl-theme owl-loaded owl-drag p-3 mb-5">
+                <div>
+                    <h3 class="my-3">西歐</h3>
+                    <p>從倫敦搭飛機或是搭乘歐洲之星可以到達許多城市，其中我坐車造訪了巴黎兩次，以及一次阿姆斯特丹的微旅行，巴黎兩次一次是看法網一次是觀光跑景點，我愛死這兩個美麗的城市，將來還有機會一定會再去！至於德國的話，我想就是啤酒和豬腳，柏林和慕尼黑是我到歐洲第一次從倫敦出遊，所以新鮮感十足
+                        ; 至於愛丁堡，冷得要命，我參加的是軍樂節，那幾週有很多的活動和市集，非常熱鬧！</p>
+                </div>
+                <div class="owl-stage-outer">
+                    <div class="owl-stage">
+                        <div class="owl-item">
+                            <div class="owl-wrapper">
+                                <img src="images/West/paris.jpg" />
+                                <p>巴黎</p>
+                            </div>
+                        </div>
+                        <div class="owl-item"><img src="images/West/munich.jpg" />
+                            <p>慕尼黑</p>
+                        </div>
+                        <div class="owl-item"><img src="images/West/amsterdam.jpg" />
+                            <p>阿姆斯特丹</p>
+                        </div>
+                        <div class="owl-item"><img src="images/West/berlin.jpg" />
+                            <p>柏林</p>
+                        </div>
+                        <div class="owl-item"><img src="images/West/edinburgh.jpeg" />
+                            <p>愛丁堡</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="loop owl-carousel owl-theme owl-loaded owl-drag p-3 mb-5">
+                <div>
+                    <h3 class="my-3">東歐</h3>
+                    <p>許多人都把奧匈捷放在同一個行程走，但我分了兩次，原因是我第一次從布拉格往西走，到哈修塔特，薩爾斯堡飛回倫敦，而第二次則是為了去布達佩斯，順道去了奧地利過一晚，比起歐洲其他國家的物價，東歐真的是相對便宜，而且行程走起來很愜意，尤其哈修塔特，簡直是人間仙境，長途跋涉到了那裡，只覺得苦盡甘來，意外的美好！
+                    </p>
+                </div>
+                <div class="owl-stage-outer">
+                    <div class="owl-stage">
+                        <div class="owl-item">
+                            <div class="owl-wrapper">
+                                <img src="images/East/prague.jpg" />
+                                <p>布拉格</p>
+                            </div>
+                        </div>
+                        <div class="owl-item"><img src="images/East/budapest.jpg" />
+                            <p>布達佩斯</p>
+                        </div>
+                        <div class="owl-item"><img src="images/East/austria.jpg" />
+                            <p>奧地利</p>
+                        </div>
+                        <div class="owl-item"><img src="images/East/hallstatt.jpg" />
+                            <p>哈修塔特</p>
+                        </div>
+                        <div class="owl-item"><img src="images/East/salsburg.jpg" />
+                            <p>薩爾斯堡</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="loop owl-carousel owl-theme owl-loaded owl-drag p-3 mb-5">
+                <div>
+                    <h3 class="my-3">南歐/北非</h3>
+                    <p>如果問我歐洲最推薦的行程，我會說去西葡吧!因為那裡東西好吃又相對便宜，我說的好吃是真的很好吃，從西班牙的燉飯到葡萄牙的海鮮，我沒有一樣不想再次去回味，加上天氣總是陽光普照，又有許多的海攤和小島，如果讓我在那生活，我完全可以！至於北非的摩洛哥呢，那必須好好的規劃，而且飲食要小心，我因為旅伴生病而沒有進到沙漠，覺得有點可惜，但我相信，人生一定要體驗一次沙漠之旅！
+                    </p>
+                </div>
+                <div class="owl-stage-outer">
+                    <div class="owl-stage">
+                        <div class="owl-item">
+                            <div class="owl-wrapper">
+                                <img src="images/South/barcelona.jpg" />
+                                <p>巴賽隆納</p>
+                            </div>
+                        </div>
+                        <div class="owl-item"><img src="images/South/mallorca.jpeg" />
+                            <p>馬略卡島</p>
+                        </div>
+                        <div class="owl-item"><img src="images/South/chef.jpg" />
+                            <p>藍城</p>
+                        </div>
+                        <div class="owl-item"><img src="images/South/lisbon.jpeg" />
+                            <p>里斯本</p>
+                        </div>
+                        <div class="owl-item"><img src="images/South/rome.jpg" />
+                            <p>羅馬</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="loop owl-carousel owl-theme owl-loaded owl-drag p-3 mb-5">
+                <div>
+                    <h3 class="my-3">北歐</h3>
+                    <p>北歐國家一直是我的夢想，而我非常的開心自己能夠在我都沒有想過的年紀去到北歐，從丹麥，芬蘭到瑞典，我都覺得非常的美，有生活品質和設計感，處處都感受得到環保意識還有潔淨的生活品質，我想如果在當地有收入，會是一件開心的事，但旅遊呢，我撐不了很久，因為物價真的太高了，我領倫敦的薪水在其他國家旅遊，都沒有到北歐覺得需要省吃儉用，不過，有機會我一定會再回去！
+                    </p>
+                </div>
+                <div class="owl-stage-outer">
+                    <div class="owl-stage">
+                        <div class="owl-item">
+                            <div class="owl-wrapper">
+                                <img src="images/North/copenhagen.jpeg" />
+                                <p>哥本哈根</p>
+                            </div>
+                        </div>
+                        <div class="owl-item"><img src="images/North/stockholm.jpeg" />
+                            <p>斯德哥爾摩</p>
+                        </div>
+                        <div class="owl-item"><img src="images/North/helsinki.heic" />
+                            <p>赫爾辛基</p>
+                        </div>
+                        <div class="owl-item"><img src="images/North/rovaneimi.jpeg" />
+                            <p>羅瓦涅米</p>
+                        </div>
+                        <div class="owl-item"><img src="images/North/inari.jpeg" />
+                            <p>伊納里</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container line border my-5 d-none d-sm-block"></div>
+        <h2 class="text-center mt-5">行程安排</h2>
+        <div class="container mt-5 online-tool">
+            <p>因為工作的關係，請假需要跟同事協調，所以我都很早請假很早買機票還有安排住宿，最晚不少於三個月以內，也因為這樣，我可以有很多航班和住宿選擇，因為我第二年住在西倫敦離希斯洛機場比較近，我也都買早去晚回起降希斯洛的班機，除非價格差很多，不然我會願意用錢換取時間還有便利性，讓自己旅遊舒服一些，以下是我安排歐洲旅遊的三個好朋友：
+            </p>
+            <div class="organize container">
+                <ul class="d-sm-flex justify-content-around p-0 my-5">
+                    <li class="overflow-hidden">
+                        <div class="p-2">
+                            <p>Skyscanner是一個眾所皆知找機票的好朋友，但是機票價格在這個平台是浮動的，舉個例子來說，大家可能知道離你的旅行時間越近價格可能越高，但是我的經驗是不同的地點早上跟晚上訂也會有所不同，在很多人上網的時間價格會提高，如果你是在冷門時段訂機票，也許會找到比較好的價格，當然別忘了市場的差別定價法則！
+                            </p>
+                        </div>
+                        <a target="blank"
+                            href="https://www.skyscanner.net/flights-from/uk/cheap-flights-from-united-kingdom.html">
+                            <img src="images/skyscanner-logo.png" alt="">
+                        </a>
+                    </li>
+                    <li class="overflow-hidden">
+                        <div class="p-2">
+                            <p>Trivago是一個整合的工具，當然他可能不是真的搜尋到“所有”的平台，但對於一般旅行真的夠了，我個人還是偏好用Booking.com訂房因為我比較熟悉他的操作介面，還有身為一個使用者，我有很好的使用者體驗所以我對它的信任度很高，不過，只是用整合網站比比價，參考一下，有何不可呢？
+                                <br><br></p>
+                        </div>
+                        <a target="blank" href="https://www.trivago.co.uk/">
+                            <img class="pt-2" src="images/Trivago-logo.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="overflow-hidden">
+                        <div class="p-2">
+                            <p>AirBnb以我自己的旅遊經驗，通常是兩個以上的旅伴會參考的選項，因為大家一起分攤，可以拉高一點預算，享受到好一點的住宿，我就曾經在里斯本與其他三個朋友一起訂了一間位於市中心的豪華公寓，到現在還是忘不了，也為那一趟行程整個加分不少，而且朋友辦新帳號推薦還有回饋，雙方都可以享有折扣！<br>
+                            </p>
+                        </div>
+                        <a target="blank" href="https://www.airbnb.co.uk/">
+                            <img class="pt-2" src="images/airbnb-horizontal.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+            <p>現在回頭看，我對於自己每一次的行程安排都還算滿意，因為現在網路上有很多的工具，更多的資訊必須透明化，市場更競爭，對於消費者來說，世界變小了，體驗也不斷的優化，我每次安排完，都會在腦中想像一遍我一落地之後，我要如何移動，睡在哪裡，看著Google
+                    Map走一遍我的行程，確保每一個細節我都有注意到，連接處沒有斷掉，歐洲算是很方便的區域，不論交通還是貨幣，都超乎我想像的便利，想看更多內容，follow我的<b><a
+                            href="https://medium.com/@rock335541" target="blank">Medium</a></b>和<b><a
+                            href="https://www.instagram.com/willytheawesome98/" target="blank">Instagram</a></b>吧！</p>
+                            </div>
+    </section>
+    <footer class="footer mt-5">
+        <div class="short d-flex justify-content-center pt-3"><img src="images/abbr.png" alt=""></div>
+
+        <div class="menu2">
+            <ul class="d-flex menu2_f p-0 m-0 justify-content-around">
+                <li><a href="live.html">Live</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="travel.html">Travel</a></li>
+                <li><a href="activity.html">Must Do</a></li>
+            </ul>
+        </div>
+        <div class="contact d-none d-sm-flex justify-content-center p-0">
+            <p><a class="text-style-none" href="mailto:rock335541@gmail.com">Email:rock335541@gmail.com</a></p>
+        </div>
+        <div class="social my-0 mx-auto">
+            <div class="iconss">
+                <ul class="d-flex justify-content-around  p-0">
+                    <li><a target="blank" href="https://medium.com/@rock335541"><i
+                                class="fab fa-medium"></i></a></li>
+                    <li><a target="blank" href="https://www.behance.net/chaodesign918"><i class="fab fa-behance-square"></i></a></li>
+                    <li><a target="blank" href="https://dribbble.com/willieee_c"><i
+                                class="fab fa-dribbble-square"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-center m-0 pt-4 copyright">&copy;2019 Willie Journey. All rights reserved.</p>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script>
+
+    $('.loop').owlCarousel({
+        center: true,
+        items: 1,
+        loop: true,
+        margin: 10,
+        responsive: {
+            600: {
+                items: 4
+            }
+        }
+    });
+
+
+</script>
+<script type="text/javascript" src="js/jquery.easeScroll.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    $("html").easeScroll();
+</script>
+<script>
+    AOS.init();
+</script>
+
+</html>

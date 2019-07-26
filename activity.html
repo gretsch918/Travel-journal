@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Willie的英打遊記 - 生活篇</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ramabhadra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="fancybox-master/dist/jquery.fancybox.css">
+
+</head>
+<style>
+    .dm_serif {
+        font-family: 'DM Serif Display', serif;
+    }
+
+    .navbar-nav {
+        width: 300px;
+        line-height: 3rem;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        font-weight: 400;
+        display: inline-block;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .navbar-collapse {
+        height: 100%;
+    }
+
+    .nav-item {
+        position: relative;
+    }
+
+    .nav-item:hover {
+        font-weight: 600;
+    }
+
+    .nav-item::before {
+        content: "";
+        width: 120%;
+        border: 1px solid transparent;
+        position: absolute;
+        bottom: 0;
+        transition: .5s;
+    }
+
+    .nav-item:hover::before {
+        content: "";
+        width: 90%;
+        border: 1px solid #000000;
+    }
+
+    @media screen and (max-width:576px) {
+        .navbar-brand {
+            font-size: 2rem;
+        }
+
+        .navbar {
+            padding: 3.5px 1rem;
+        }
+
+        .navbar button {
+            width: 56px;
+            height: 52px;
+        }
+
+        .navbar-nav {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link {
+            color: black !important;
+        }
+    }
+
+    body {
+        padding-top: 50px;
+    }
+
+    .main {
+        width: 100%;
+        height: 95vh;
+        box-shadow: 0 3px 20px 5px #eeeeee;
+        margin-bottom: 30px;
+    }
+
+    .museum {
+        height: 100%;
+        width: 20%;
+        margin-left: 10%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .box-m {
+        width: 20%;
+        height: 40%;
+        justify-content: center;
+        align-items: center;
+        background: lightblue;
+        animation-name: box-ani;
+        animation-duration: 1.6s;
+    }
+
+    @keyframes box-ani {
+        0% {
+            width: 0;
+            height: 0
+        }
+
+        50% {
+            width: 1%;
+            height: 40%;
+        }
+
+        100% {
+            width: 20%;
+            height: 40%;
+        }
+    }
+
+    .m-text {
+        width: 60%;
+    }
+
+    .m-text h3 {
+        font-family: 'Shadows Into Light', cursive;
+        margin-top: 40%;
+    }
+
+    .box-b {
+        width: 100%;
+        height: 30%;
+        background: rgb(196, 227, 237);
+    }
+
+    .wrapper {
+        width: 968px;
+        margin: 0 auto;
+    }
+
+    .carousel {
+        box-shadow: 0 0.75rem 1.25rem 0.0625rem rgba(64, 64, 64, 0.2);
+    }
+
+    .w-row {
+        height: 200px;
+    }
+
+    .w-row ul {
+        list-style: none;
+    }
+
+    .w-row li {
+        width: 30%;
+        height: 100%;
+        transition: .3s;
+        overflow: hidden;
+    }
+
+    .w-row li:hover img {
+        transform: scale(1.1, 1.1);
+        transition: .3s;
+    }
+
+    .w-row li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .3s;
+        text-align: center;
+    }
+
+    @media screen and (max-width:576px) {
+        .box-m {
+            
+            background: none;
+            position: absolute;
+            top: 40%;
+            left: 31%;
+        }
+        .fun{
+            position: absolute;
+            top: 48%;
+        }
+
+        .main {
+            width: 100%;
+            background-image: url("images/IMG_3603.JPG");
+            box-shadow: none;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .wrapper{
+            width: 100%;
+            padding: 0 10px;
+        }
+        .w-row{
+            height: 99vh;
+        }
+        .w-row ul{
+            margin: 0;
+        }
+        .w-row li{
+            width: 100%;
+            height: 33%;
+            padding: 10px 0;
+        }
+
+    }
+
+    .footer {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .navbar a {
+        color: #fff;
+    }
+
+    .collapse h5 {
+        color: #fff;
+    }
+
+    .pos-f-t {
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        top: 0;
+    }
+
+    .picrwd {
+        display: none;
+    }
+
+    .footer_menu {
+        height: 80%;
+    }
+
+    .menu2,
+    .social,
+    .contact {
+        width: 270px;
+        margin: 1.5rem;
+        margin: 0 auto;
+        height: 30px;
+    }
+
+    .contact p a,
+    .iconss a {
+        color: black;
+        font-weight: 200;
+    }
+
+    .menu2 ul,
+    .social ul {
+        list-style: none;
+        width: 100%;
+    }
+
+    .menu2 li a {
+        color: black;
+        font-size: 1rem;
+        font-weight: 100;
+    }
+
+    .menu2 li a:hover,
+    .contact a:hover,
+    .iconss li a:hover {
+        color: #666666;
+        text-decoration: none;
+    }
+
+    .menu2_f {
+        margin-left: 5rem;
+        list-style: none;
+    }
+
+    .social {
+        width: 200px;
+    }
+
+    .iconss {
+        height: 100%;
+    }
+
+    .iconss ul {
+        height: 2.5rem;
+    }
+
+    .iconss ul li {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .iconss ul li a {
+        font-size: 1.8rem;
+    }
+
+    .contact {
+        width: 33%;
+    }
+
+
+    .view {
+        width: 100%;
+        height: 300px;
+    }
+
+    .view figure,
+    .view img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .short {
+        width: 7%;
+        margin: 0 auto;
+    }
+
+    .short img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .footer {
+        width: 100%;
+        height: auto;
+        background: #d7e1ed;
+        padding: 5px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+
+    @media screen and (max-width:576px){
+    .short{
+      width: 20%;
+    }
+    .iconss{
+      margin: 1rem auto;
+    }
+    
+  }
+
+
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-sm-0 fixed-top">
+        <div class="willie-j mx-4">
+            <a class="navbar-brand pb-2 dm_serif" href="Index.html">Willie Journey.</a>
+        </div>
+        <button class="navbar-toggler d-sm-none p-3" type="button" data-toggle="collapse"
+            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end dm_serif" id="navbarNavAltMarkup">
+            <div class="navbar-nav justify-content-around mx-sm-5">
+                <a class="text-center nav-item nav-link" href="live.html">Live <span
+                        class="sr-only">(current)</span></a>
+                <a class="text-center nav-item nav-link " href="work.html">Work</a>
+                <a class="text-center nav-item nav-link" href="travel.html">Travel</a>
+                <a class="text-center nav-item nav-link disabled" href="activity.html" style="color:#000000">Must Do</a>
+            </div>
+        </div>
+    </nav>
+    <div class="collapse dm_serif" id="navbarToggleExternalContent">
+        <div class="bg-dark p-2 text-center">
+            <a class="p-1" href="live.html">
+                <h5>Live</h5>
+            </a>
+            <h5 class="p-1">Work</h5>
+            <a class="p-1" href="travel.html">
+                <h5>Travel</h5>
+            </a>
+            <a class="p-1" href="activity.html">
+                <h5>Must Do</h5>
+            </a>
+        </div>
+    </div>
+    <section class="main d-flex overflow-hidden">
+        <div data-aos="fade-down" data-aos-delay="300" class="museum d-none d-sm-block">
+            <img src="images/IMG_3603.jpg" alt="">
+        </div>
+        <div class="box-m d-sm-flex">
+            <h1 class="dm_serif" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="800">Activity.</h1>
+        </div>
+        <h4 class="dm_serif d-sm-none text-center w-100 fun" data-aos="fade-right" data-aos-delay="1200" data-aos-duration="800">What`s fun <br> in London?</h4>
+        <div class="m-text d-none d-sm-block" data-aos="fade-up" data-aos-delay="1500">
+            <h3> In this big city with a lot of variety,<br> I have so many to do out of work. <br>
+                Playing and watching tennis match at Wimbledon,<br>
+                concert, Christmas party and New Year Eve fireworks etc.
+                <br> All these made my working holiday <br>
+                much more colorful than I expected.
+            </h3>
+            <div class="box-b"></div>
+        </div>
+    </section>
+    <h2 class="text-center my-5">跨年煙火</h2>
+    <section class="wrapper">
+        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="10000">
+                    <img src="images/fireworks/fire1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <img src="images/fireworks/fire2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/fireworks/fire3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+    <div class="container my-5">
+        <p>倫敦眼每年跨年都會放煙火，在前幾個月會有分區售票，因為看到煙火的角度還有風向，不同的區域以前色區分，藍區就是面對著倫敦眼的區域，視野最好，價格的部分並不會差太多，約10鎊左右;
+            因為有售票加上贊助商的關係，煙火秀長達12分鐘，讓人大飽眼福，上個廁所回來都來得及，如果真的想要到水岸第一排觀賞煙火，那就得早點到找一個好位置，保暖一定不能忘記，因為要在沒有遮蔽物的地方坐好幾個小時！</p>
+    </div>
+    <div class="container line border d-none d-sm-block my-5"></div>
+    <h2 class="text-center my-5">溫布頓</h2>
+    <div class="wimbledon flex-column mb-5">
+        <div class="w-row container">
+            <ul class="d-md-flex justify-content-center w-100 h-100 p-0">
+                <li><a href="images/Wimbledon/IMG_1240.jpg" data-fancybox="gallery" data-caption="Wimbledon Court">
+                        <img src="images/Wimbledon/IMG_1240.jpg" alt="" />
+                    </a></li>
+                <li class="mx-sm-3"><a href="images/Wimbledon/IMG_3577.jpg" data-fancybox="gallery"
+                        data-caption="Me & Rafa">
+                        <img src="images/Wimbledon/IMG_3577.jpg" alt="" />
+                    </a></li>
+                <li><a href="images/Wimbledon/IMG_0312.jpg" data-fancybox="gallery"
+                        data-caption="At the practice court">
+                        <img src="images/Wimbledon/IMG_0312.jpg" alt="" />
+                    </a></li>
+            </ul>
+        </div>
+        <div class="w-row container my-sm-3">
+            <ul class="d-md-flex justify-content-center w-100 h-100 p-0">
+                <li><a href="images/Wimbledon/IMG_6858.jpg" data-fancybox="gallery"
+                        data-caption="Interviews before the tourment">
+                        <img src="images/Wimbledon/IMG_6858.jpg" alt="" />
+                    </a></li>
+                <li class="mx-sm-3"><a href="images/Wimbledon/Wimbledon-Logo.png" data-fancybox="gallery"
+                        data-caption="Wimbledon Logo">
+                        <img src="images/Wimbledon/Wimbledon-Logo.png" alt="" />
+                    </a></li>
+                <li><a href="images/Wimbledon/IMG_4619.jpg" data-fancybox="gallery" data-caption="Roger playing Ryukyu">
+                        <img src="images/Wimbledon/IMG_4619.jpg" alt="" />
+                    </a></li>
+            </ul>
+        </div>
+        <div class="w-row container">
+            <ul class="d-md-flex justify-content-center w-100 h-100 p-0">
+                <li><a href="images/Wimbledon/IMG_3752.jpg" data-fancybox="gallery" data-caption="Maria`s passing by">
+                        <img src="images/Wimbledon/IMG_3752.jpg" alt="" />
+                    </a></li>
+                <li class="mx-sm-3"><a href="images/Wimbledon/IMG_4658.jpg" data-fancybox="gallery"
+                        data-caption="Novak having interview">
+                        <img src="images/Wimbledon/IMG_4658.jpg" alt="" />
+                    </a></li>
+                <li><a href="images/Wimbledon/IMG_0753.jpg" data-fancybox="gallery"
+                        data-caption="All the carema`s waiting for top players">
+                        <img src="images/Wimbledon/IMG_0753.jpg" alt="" />
+                    </a></li>
+            </ul>
+        </div>
+        <div class="container my-sm-5">
+            <p>到英國怎麼能不看溫網呢？歷史最悠久的草地大滿貫賽事，說什麼也得去體驗比賽個氣氛，這兩年當中我很幸運的能夠有機會跟頂尖的球星們近距離接觸，有我最愛的費德勒和納達爾，親眼見到他們的時候我真的說不出話來，心裡非常激動，那些經歷我永生難忘！不管喜不喜愛網球，都一定要到溫布頓去朝聖一下，那個氛圍還有美麗的俱樂部，還有比賽的刺激，我無法用言語形容，一定要親自造訪！
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="short d-flex justify-content-center pt-3"><img src="images/abbr.png" alt=""></div>
+
+        <div class="menu2">
+            <ul class="d-flex menu2_f p-0 m-0 justify-content-around">
+                <li><a href="live.html">Live</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="travel.html">Travel</a></li>
+                <li><a href="live.html">Must Do</a></li>
+            </ul>
+        </div>
+        <div class="contact d-none d-sm-flex justify-content-center p-0">
+            <p><a class="text-style-none" href="mailto:rock335541@gmail.com">Email:rock335541@gmail.com</a></p>
+        </div>
+        <div class="social my-0 mx-auto">
+            <div class="iconss">
+                <ul class="d-flex justify-content-around  p-0">
+                    <li><a target="blank" href="https://medium.com/@rock335541"><i
+                                class="fab fa-medium"></i></a></li>
+                    <li><a target="blank" href="https://www.behance.net/chaodesign918"><i class="fab fa-behance-square"></i></a></li>
+                    <li><a target="blank" href="https://dribbble.com/willieee_c"><i
+                                class="fab fa-dribbble-square"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-center m-0 pt-4 copyright">&copy;2019 Willie Journey. All rights reserved.</p>
+    </footer>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="fancybox-master/dist/jquery.fancybox.js"></script>
+</body>
+<script type="text/javascript" src="js/jquery.easeScroll.js"></script>
+<script>
+    $("html").easeScroll();
+</script>
+<script>
+    AOS.init();
+    $('[data-fancybox="gallery"]').fancybox({
+        // Options will go here
+    });
+</script>
+
+</html>
