@@ -100,6 +100,8 @@
 
   @media screen and (max-width:576px){
     .keyVision{
+      height: 100vh;
+      background-size: auto 100%;
       background-image: url("images/profile-bridge.jpg");
       box-shadow: none;
       background-attachment: fixed;
@@ -112,6 +114,7 @@
     .nav_name h2{
       color: rgb(41, 41, 41);
       text-shadow: none;
+      font-size: 1.5rem;
     }
     .navbar{
       background: #f8f9fa;
@@ -188,33 +191,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  @media screen and (max-width:576px){
-    .wrapper{
-      width: 100%;
-      padding-right:0; 
-    }
-    .intro-photo{
-      transform: none;
-      width: 100%;
-      border: none;
-    }
-    .wrapper-bg{
-      margin-top: 20px;
-    }
-    .scroll-down{
-      position: absolute;
-      bottom:30px ;
-      width: 100%;
-      color: #ffffff;
-    }
-    .scroll-down i{
-      width: 100%;
-      height: 100%;
-      font-size: 3rem;
-    }
-    
   }
 
   .apply {
@@ -300,6 +276,37 @@
     .question{
       margin: 3rem auto;
     }
+    .wrapper{
+      width: 100%;
+      padding-right:0; 
+    }
+    .intro-photo{
+      transform: none;
+      width: 100%;
+      border: none;
+    }
+    .intro h1, .applyright h1, .question h1{
+      font-size: 2rem;
+      text-align: center;
+    }
+    .wrapper-bg{
+      margin-top: 20px;
+    }
+    .scroll-down{
+      position: absolute;
+      bottom:30px ;
+      width: 100%;
+      color: #ffffff;
+    }
+    .scroll-down i{
+      width: 100%;
+      height: 100%;
+      font-size: 3rem;
+    }
+    .applyright{
+      height: 20%;
+    }
+    
   }
 
   .footer_menu {
@@ -399,6 +406,9 @@
   @media screen and (max-width:576px){
     .short{
       width: 20%;
+    }
+    .short img{
+      object-fit: contain;
     }
     .iconss{
       margin: 1rem auto;
