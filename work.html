@@ -86,7 +86,7 @@
 
     @media screen and (max-width:576px){
        .navbar-brand{
-        width: 80%;
+        width: 75%;
         font-size: 1.5rem;
         margin: auto 0 !important;
        }
@@ -152,7 +152,7 @@
         font-family: 'Shadows Into Light', cursive;
     }
 
-    .work figure {
+    .work .dino {
         position: absolute;
         z-index: 3;
         max-width: 40%;
@@ -174,17 +174,22 @@
       .work::after{
             display: none;
         }
-      .work{
-      background-image: url("images/IMG_0264.jpg");
-      box-shadow: none;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-        }
+     
         .work_title{
             color: white;
             top: 30%;
+        }
+        .m-workbg{
+            position: absolute fixed;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .m-workbg img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+
         }
     }
 
@@ -450,7 +455,12 @@
 
     @media screen and (max-width:576px){
     .short{
-      width: 20%;
+        width: 20%;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    .short img{
+        object-fit: contain;
     }
     .iconss{
       margin: 1rem auto;
@@ -493,13 +503,16 @@
             </div>
         </div>
     <section class="work mb-5">
+        <figure class="m-workbg d-sm-none">
+            <img src="images/IMG_0264.jpg" alt="">
+        </figure>
         <div class="work_title" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-duration="700"
             data-aos-delay="1000">
             <h1 class="dm_serif">Work.</h1>
             <h4 class="d-sm-none dm_serif">How was my job?</h4>
             <h5 class="d-none d-sm-block">Its never easy to find a good job.<br>Thank god I was lucky enough.</h5>
         </div>
-        <figure class="d-none d-sm-block" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-duration="700" data-aos-delay="1200">
+        <figure class="d-none d-sm-block dino" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-duration="700" data-aos-delay="1200">
             <img src="images/IMG_8393.JPG" alt="UK working holiday - Regent street Coach house">
         </figure>
     </section>

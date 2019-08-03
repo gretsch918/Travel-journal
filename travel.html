@@ -7,12 +7,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="description" content="我計畫了很多次的微旅行，因為我第一次去到德國，安排了太多天，竟然有點想念倫敦的家，一方面我也有許多行程都是自己一個人，所以單獨旅行走得很快，也可以很果斷的做每個決定，我就陸陸續續去了我所有想去的地方，從北到南，從東到西，歐洲很大，我想我還有一部份的夢沒有完成，不過沒有關係，這樣的人生才有努力的目標！">
-  <meta property="og:url" itemprop="url" content="https://gretsch918.github.io/Travel_journal/">
-  <meta property="og:title" itemprop="name" content="Willie的英打遊記-旅遊篇">
-  <meta property="og:image" itemprop="image" content="https://gretsch918.github.io/Travel_journal/images/IMG_6464.jpg">
-  <meta property="og:type" itemprop="article">
-  <meta property="og:description" itemprop="description" content="我計畫了很多次的微旅行，因為我第一次去到德國，安排了太多天，竟然有點想念倫敦的家，一方面我也有許多行程都是自己一個人，所以單獨旅行走得很快，也可以很果斷的做每個決定，我就陸陸續續去了我所有想去的地方，從北到南，從東到西，歐洲很大，我想我還有一部份的夢沒有完成，不過沒有關係，這樣的人生才有努力的目標！">
+    <meta name="description"
+        content="我計畫了很多次的微旅行，因為我第一次去到德國，安排了太多天，竟然有點想念倫敦的家，一方面我也有許多行程都是自己一個人，所以單獨旅行走得很快，也可以很果斷的做每個決定，我就陸陸續續去了我所有想去的地方，從北到南，從東到西，歐洲很大，我想我還有一部份的夢沒有完成，不過沒有關係，這樣的人生才有努力的目標！">
+    <meta property="og:url" itemprop="url" content="https://gretsch918.github.io/Travel_journal/">
+    <meta property="og:title" itemprop="name" content="Willie的英打遊記-旅遊篇">
+    <meta property="og:image" itemprop="image"
+        content="https://gretsch918.github.io/Travel_journal/images/IMG_6464.jpg">
+    <meta property="og:type" itemprop="article">
+    <meta property="og:description" itemprop="description"
+        content="我計畫了很多次的微旅行，因為我第一次去到德國，安排了太多天，竟然有點想念倫敦的家，一方面我也有許多行程都是自己一個人，所以單獨旅行走得很快，也可以很果斷的做每個決定，我就陸陸續續去了我所有想去的地方，從北到南，從東到西，歐洲很大，我想我還有一部份的夢沒有完成，不過沒有關係，這樣的人生才有努力的目標！">
 
     <!-- Bootstrap CSS -->
     <link rel="icon" href="images/abbr.png" type="image/x-icon">
@@ -33,9 +36,9 @@
         font-family: 'DM Serif Display', serif;
     }
 
-    .mandarin{
-  font-family: 'Noto Sans TC', sans-serif;
- }
+    .mandarin {
+        font-family: 'Noto Sans TC', sans-serif;
+    }
 
     .navbar-nav {
         width: 300px;
@@ -80,25 +83,29 @@
         border: 1px solid #000000;
     }
 
-    @media screen and (max-width:576px){
-       .navbar-brand{
-        width: 80%;
-        font-size: 1.5rem;
-        margin: auto 0 !important;
-       }
-       .navbar{
-           padding: 3.5px 1rem;
-       }
-       .navbar button{
-           width: 56px;
-           height: 52px;
-       }
-       .navbar-nav{
-           width: 100%;
-       }
-       .navbar-nav .nav-link{
-        color: black !important;
-    }
+    @media screen and (max-width:576px) {
+        .navbar-brand {
+            width: 75%;
+            font-size: 1.5rem;
+            margin: auto 0 !important;
+        }
+
+        .navbar {
+            padding: 3.5px 1rem;
+        }
+
+        .navbar button {
+            width: 56px;
+            height: 52px;
+        }
+
+        .navbar-nav {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link {
+            color: black !important;
+        }
     }
 
     body {
@@ -165,7 +172,7 @@
         font-family: 'Shadows Into Light', cursive;
     }
 
-    .main figure {
+    .main .wing {
         position: absolute;
         width: 30%;
         height: 90%;
@@ -174,7 +181,7 @@
         top: 0;
     }
 
-    .main figure img {
+    .main .wing img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -186,8 +193,8 @@
         top: 20%;
         left: 5%;
         z-index: 1;
-        color:rgba(255, 255, 255, 0.7);
-        
+        color: rgba(255, 255, 255, 0.7);
+
     }
 
     .main .country h1 {
@@ -236,24 +243,39 @@
         padding: 30px;
     }
 
-    @media screen and (max-width:576px){
-        .photos{
+    @media screen and (max-width:576px) {
+        .photos {
             padding: 5px;
         }
-        .main::before, .main::after, .main .country{
+
+        .main::before,
+        .main::after,
+        .main .country {
             display: none;
         }
-        .main{
+
+        /* .main{
       background-image: url('images/IMG_5566.jpg');
       box-shadow: none;
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-        }
-        .tra_text{
+        } */
+        .tra_text {
             top: 10%;
             left: 15%;
+        }
+
+        .m-travelbg {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .m-travelbg img {
+
+            height: 100%;
+            object-fit: contain;
         }
     }
 
@@ -385,19 +407,22 @@
         top: 0;
     }
 
-    @media screen and (max-width:576px){
-        .online-tool{
+    @media screen and (max-width:576px) {
+        .online-tool {
             height: 340vh;
         }
-        .organize li{
+
+        .organize li {
             width: 100%;
             height: 420px;
             margin-bottom: 10px;
         }
-        .organize{
+
+        .organize {
             height: 235vh;
         }
-        .organize ul{
+
+        .organize ul {
             height: 130vh;
         }
 
@@ -506,54 +531,64 @@
         font-size: 0.8rem;
     }
 
-    @media screen and (max-width:576px){
-    .short{
-      width: 20%;
-    }
-    .iconss{
-      margin: 1rem auto;
-    }
-    
-  }
+    @media screen and (max-width:576px) {
+        .short {
+            width: 20%;
+            height: 50px;
+            margin-bottom: 10px;
+        }
 
+        .short img {
+            object-fit: contain;
+        }
 
+        .iconss {
+            margin: 1rem auto;
+        }
+
+    }
 </style>
 
 <body>
-    
-        <nav class="navbar navbar-expand-lg navbar-light bg-light p-sm-0 fixed-top">
-                <div class="willie-j mx-4">
-                    <a class="navbar-brand pb-2 dm_serif" href="index.html">Willie Journey.</a>
-                </div>
-                <button class="navbar-toggler d-sm-none p-3" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end dm_serif" id="navbarNavAltMarkup">
-                    <div class="navbar-nav justify-content-around mx-sm-5">
-                        <a class="text-center nav-item nav-link" href="live.html">Live <span class="sr-only">(current)</span></a>
-                        <a class="text-center nav-item nav-link " href="work.html" >Work</a>
-                        <a class="text-center nav-item nav-link disabled" href="travel.html" style="color:#000000">Travel</a>
-                        <a class="text-center nav-item nav-link" href="activity.html">Must Do</a>
-                    </div>
-                </div>
-            </nav>
-            <div class="collapse dm_serif" id="navbarToggleExternalContent">
-                <div class="bg-dark p-2 text-center">
-                    <a class="p-1" href="live.html">
-                        <h5>Live</h5>
-                    </a>
-                    <h5 class="p-1">Work</h5>
-                    <a class="p-1" href="travel.html">
-                        <h5>Travel</h5>
-                    </a>
-                    <a class="p-1" href="activity.html">
-                        <h5>Must Do</h5>
-                    </a>
-                </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-sm-0 fixed-top">
+        <div class="willie-j mx-4">
+            <a class="navbar-brand pb-2 dm_serif" href="index.html">Willie Journey.</a>
+        </div>
+        <button class="navbar-toggler d-sm-none p-3" type="button" data-toggle="collapse"
+            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end dm_serif" id="navbarNavAltMarkup">
+            <div class="navbar-nav justify-content-around mx-sm-5">
+                <a class="text-center nav-item nav-link" href="live.html">Live <span
+                        class="sr-only">(current)</span></a>
+                <a class="text-center nav-item nav-link " href="work.html">Work</a>
+                <a class="text-center nav-item nav-link disabled" href="travel.html" style="color:#000000">Travel</a>
+                <a class="text-center nav-item nav-link" href="activity.html">Must Do</a>
             </div>
-    
+        </div>
+    </nav>
+    <div class="collapse dm_serif" id="navbarToggleExternalContent">
+        <div class="bg-dark p-2 text-center">
+            <a class="p-1" href="live.html">
+                <h5>Live</h5>
+            </a>
+            <h5 class="p-1">Work</h5>
+            <a class="p-1" href="travel.html">
+                <h5>Travel</h5>
+            </a>
+            <a class="p-1" href="activity.html">
+                <h5>Must Do</h5>
+            </a>
+        </div>
+    </div>
+
     <section class="main">
+        <figure class="m-travelbg d-sm-none">
+            <img src="images/IMG_5566.jpg" alt="">
+        </figure>
         <div class="country dm_serif" data-aos="fade-down" data-aos-easing="ease-in-out">
             <h1>Paris</h1>
             <h2>Prague</h2>
@@ -566,9 +601,11 @@
             data-aos-delay="300">
             <h1 class="dm_serif">Travel.</h1>
             <h4 class="d-sm-none dm_serif">Where did I travel?</h4>
-            <h3 class="d-none d-sm-block">I planned many short trips in Europe. <br>There`re always something beyond my expectation.</h3>
+            <h3 class="d-none d-sm-block">I planned many short trips in Europe. <br>There`re always something beyond my
+                expectation.</h3>
         </div>
-        <figure class="d-none d-sm-block" data-aos="fade-down" data-aos-delay="500" data-aos-easing="ease-in-out" data-aos-duration="700">
+        <figure class="d-none d-sm-block wing" data-aos="fade-down" data-aos-delay="500" data-aos-easing="ease-in-out"
+            data-aos-duration="700">
             <img src="images/IMG_6464.jpg" alt="uk working holiday - on the way to Finland">
         </figure>
     </section>
@@ -586,7 +623,8 @@
             <div class="loop owl-carousel owl-theme owl-loaded owl-drag p-3 mb-5">
                 <div>
                     <h3 class="my-3 mandarin">西歐</h3>
-                    <p class="mandarin">從倫敦搭飛機或是搭乘歐洲之星可以到達許多城市，其中我坐車造訪了巴黎兩次，以及一次阿姆斯特丹的微旅行，巴黎兩次一次是看法網一次是觀光跑景點，我愛死這兩個美麗的城市，將來還有機會一定會再去！至於德國的話，我想就是啤酒和豬腳，柏林和慕尼黑是我到歐洲第一次從倫敦出遊，所以新鮮感十足
+                    <p class="mandarin">
+                        從倫敦搭飛機或是搭乘歐洲之星可以到達許多城市，其中我坐車造訪了巴黎兩次，以及一次阿姆斯特丹的微旅行，巴黎兩次一次是看法網一次是觀光跑景點，我愛死這兩個美麗的城市，將來還有機會一定會再去！至於德國的話，我想就是啤酒和豬腳，柏林和慕尼黑是我到歐洲第一次從倫敦出遊，所以新鮮感十足
                         ; 至於愛丁堡，冷得要命，我參加的是軍樂節，那幾週有很多的活動和市集，非常熱鬧！</p>
                 </div>
                 <div class="owl-stage-outer">
@@ -736,16 +774,18 @@
                         </a>
                     </li>
                 </ul>
-                
+
             </div>
-            <p class="mandarin">現在回頭看，我對於自己每一次的行程安排都還算滿意，因為現在網路上有很多的工具，更多的資訊必須透明化，市場更競爭，對於消費者來說，世界變小了，體驗也不斷的優化，我每次安排完，都會在腦中想像一遍我一落地之後，我要如何移動，睡在哪裡，看著Google
-                    Map走一遍我的行程，確保每一個細節我都有注意到，連接處沒有斷掉，歐洲算是很方便的區域，不論交通還是貨幣，都超乎我想像的便利，想看更多內容，follow我的<b><a
-                            href="https://medium.com/@rock335541" target="blank">Medium</a></b>和<b><a
-                            href="https://www.instagram.com/willytheawesome98/" target="blank">Instagram</a></b>吧！</p>
-                            </div>
+            <p class="mandarin">
+                現在回頭看，我對於自己每一次的行程安排都還算滿意，因為現在網路上有很多的工具，更多的資訊必須透明化，市場更競爭，對於消費者來說，世界變小了，體驗也不斷的優化，我每次安排完，都會在腦中想像一遍我一落地之後，我要如何移動，睡在哪裡，看著Google
+                Map走一遍我的行程，確保每一個細節我都有注意到，連接處沒有斷掉，歐洲算是很方便的區域，不論交通還是貨幣，都超乎我想像的便利，想看更多內容，follow我的<b><a
+                        href="https://medium.com/@rock335541" target="blank">Medium</a></b>和<b><a
+                        href="https://www.instagram.com/willytheawesome98/" target="blank">Instagram</a></b>吧！</p>
+        </div>
     </section>
     <footer class="footer mt-5">
-        <div class="short d-flex justify-content-center pt-3"><img src="images/abbr.png" alt="UK working holiday - Willie Journey logo"></div>
+        <div class="short d-flex justify-content-center pt-3"><img src="images/abbr.png"
+                alt="UK working holiday - Willie Journey logo"></div>
 
         <div class="menu2">
             <ul class="d-flex menu2_f p-0 m-0 justify-content-around">
@@ -761,9 +801,9 @@
         <div class="social my-0 mx-auto">
             <div class="iconss">
                 <ul class="d-flex justify-content-around  p-0">
-                    <li><a target="blank" href="https://medium.com/@rock335541"><i
-                                class="fab fa-medium"></i></a></li>
-                    <li><a target="blank" href="https://www.behance.net/chaodesign918"><i class="fab fa-behance-square"></i></a></li>
+                    <li><a target="blank" href="https://medium.com/@rock335541"><i class="fab fa-medium"></i></a></li>
+                    <li><a target="blank" href="https://www.behance.net/chaodesign918"><i
+                                class="fab fa-behance-square"></i></a></li>
                     <li><a target="blank" href="https://dribbble.com/willieee_c"><i
                                 class="fab fa-dribbble-square"></i></a>
                     </li>
